@@ -16,19 +16,19 @@ public class DeselectDropdwonValue {
 		driver.manage().window().maximize();
 
 		driver.get("https://demoqa.com/select-menu");
-		
+
 		Select dropSelect = new Select(driver.findElement(By.id("cars")));
 		dropSelect.selectByIndex(1);
 		dropSelect.selectByValue("opel");
 		dropSelect.selectByVisibleText("Audi");
-		
+
 		System.out.println("Drop Down Supports Multiple Selection? "+ dropSelect.isMultiple());
-		
-		
+
+
 		// Deselect Dropdwon
-		
+
 		dropSelect.deselectAll();
-		
+
 		/*
 		 * dropSelect.deselectByIndex(1); dropSelect.deselectByValue("opel");
 		 * dropSelect.deselectByVisibleText("Audi");
